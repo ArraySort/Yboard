@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: ${profile}
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  # Spring Live Reload 설정
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
+  # 이메일 인증을 위한 설정
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: dudwns1045@gmail.com
+    password: ENC(LniQdqogwbs9+6vBOv4n1p2Nt3e8zNK8w+QYfWkhW3c=)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true
+            required: true
