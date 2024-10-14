@@ -5,19 +5,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @Slf4j
-@ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = JasyptTest.class)
 class JasyptTest {
 
 	@Test
 	void jasyptTest() {
 		// 암호화 하려는 텍스트
-		String text = "1045";
+		String text = "암호화 텍스트";
 
 		// 인코딩 된 텍스트
 		String encryptText = getEncrypt(text);
